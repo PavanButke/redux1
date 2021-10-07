@@ -9,6 +9,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AddShoppingCartSharpIcon from '@mui/icons-material/AddShoppingCartSharp';
 
+import {Link} from "react-router-dom";
+
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -95,7 +97,10 @@ let Navbar = () =>
             }}
            
       
-            ></AddShoppingCartSharpIcon>
+            >
+                 <Link  class="AppBar" to='/'></Link>
+
+            </AddShoppingCartSharpIcon>
           <Typography style={{ marginRight: 30 }}></Typography>
 
 

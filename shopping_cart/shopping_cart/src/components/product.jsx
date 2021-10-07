@@ -5,6 +5,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Fab from '@mui/material/Fab';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+
 
 
 const Product = () =>
@@ -31,6 +34,8 @@ const Product = () =>
       <CardActions>
         <Button size="small" style={{color:"#81ecec"}}  href="/Cart">Become Parent</Button>
         <Button size="small" href="https://www.akc.org/dog-breeds/rottweiler/ ">Learn More</Button>
+      
+
       </CardActions>
     </Card>
 

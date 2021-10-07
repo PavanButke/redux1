@@ -1,3 +1,9 @@
+h2{
+    display: flex;
+    justify-content: center;
+
+
+}
 .product-container {
     display: flex;
     justify-content: space-evenly;
@@ -22,3 +28,10 @@
     font-size: 2rem;
     color: white;
   } */
+
+.footer {
+    background-color: black;
+
+}
+
+  

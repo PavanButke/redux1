@@ -14,11 +14,33 @@ import AppBar from '@mui/material/AppBar';
 // import MenuItem from '@mui/material/MenuItem';
 // import Menu from '@mui/material/Menu';
 import Navbar from "./components/navbar";
+import Home from "./components/home"
+import Cart from "./components/cart"
+import Preview from "./components/preview"
 
+import {BrowserRouter as Router , Switch , Route } from "react-router-dom"
 let App = () =>{
   return (
     <>
+    <Router>
+
     <Navbar/>
+    <Switch>
+
+      <Route path="/cart">
+        <Cart/>
+      </Route>
+      <Route path="/preview">
+        <Preview/>
+      </Route>
+
+
+      <Route path="/">
+      <Home/>
+      </Route>
+            
+    </Switch>
+    </Router>
 
     </>
   );

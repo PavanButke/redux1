@@ -31,8 +31,8 @@ let App = () =>{
       <Route path="/cart">
         <Cart/>
       </Route>
-      <Route path="/preview">
-        <Preview/>
+      <Route path="/preview/:id">
+            <Preview />
       </Route>
 
 

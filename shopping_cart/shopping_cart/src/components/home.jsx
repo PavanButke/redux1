@@ -10,6 +10,9 @@ import HomeIcon from '@mui/icons-material/Home';
 import * as React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import Stack from '@mui/material/Stack';
+import DeleteIcon from '@mui/icons-material/Delete';
+import IconButton from '@mui/material/IconButton';
 
 
 import Product from "./product";
@@ -21,7 +24,7 @@ const Home = () =>
     <>
 
         <h2>Top Breeds to Adopt</h2> 
-      <div className="product-container">
+        <div className="product-container">
           <Product/>
 
       </div>
@@ -39,7 +42,13 @@ const Home = () =>
             <Toolbar align-items="center">
                 
                
-                 <HomeIcon sx={{ fontSize: 40 }} />
+                 {/* <HomeIcon sx={{ fontSize: 40 }}  /> */}
+                 <Stack direction="row" spacing={1}>
+                  <IconButton aria-label="home">
+                 <HomeIcon href="/home"/>
+
+                 </IconButton>
+                  </Stack>
                  <Typography style={{ marginRight: 300   }}></Typography>
 
                  < FavoriteBorderIcon  sx={{ fontSize: 40 }} />

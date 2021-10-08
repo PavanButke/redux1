@@ -95,11 +95,17 @@ let Navbar = () =>
             />
             
           </Search>
-          <Stack direction="row" spacing={2} >
+          {/* <Stack direction="row" spacing={2} >
              <Button variant="contained" startIcon={<ShoppingCartIcon />} href='/cart'>
               </Button>
-      </Stack>
-          <Typography style={{ marginRight: 30 }}></Typography>
+      </Stack> */}
+    <Typography style={{ marginRight: 30 }}></Typography>
+      <Stack direction="row" spacing={2} >
+             <Button variant="circular" startIcon={<ShoppingCartIcon />} href='/cart'>
+              </Button>
+              
+    </Stack>
+          
           {/* <Stack direction="row" spacing={2}>
           <Button href="/Cart" Icon={<AddShoppingCartSharpIcon
              style={{ fontSize: 40 , }}

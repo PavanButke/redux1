@@ -1,0 +1,51 @@
+.h2 {
+    display: flex;
+   height: 15px;
+   width: 100%;
+    
+}
+
+.preview-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.preview-img-container
+.preview-listing {
+    
+  /* height: 50%;
+  width: 50%;
+    */
+
+}
+.preview-img-container img {
+    display: block;
+    height: 70%;
+    width: 70%;
+    object-fit: contain;
+    border-radius: 200%;
+}
+
+.preview-listing h2 {
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  .preview-listing p {
+    text-align: justify;
+    padding: 20px;
+  }
+
+  .preview-listing button {
+    display: block;
+    margin: auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background: #f7b731;
+    font-size: 1.2rem;
+    box-shadow: initial;
+    justify-content: center;
+}

@@ -31,7 +31,7 @@ let App = () =>{
       <Route path="/cart">
         <Cart/>
       </Route>
-      <Route path="/preview/:id">
+      <Route path="/preview">
             <Preview />
       </Route>
 

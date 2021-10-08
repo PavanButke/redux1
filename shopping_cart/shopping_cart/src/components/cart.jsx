@@ -1,12 +1,6 @@
 
 import * as React from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+
 import AppBar from '@mui/material/AppBar';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
@@ -19,55 +13,60 @@ import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 
 import Stack from '@mui/material/Stack';
-import DeleteIcon from '@mui/icons-material/Delete';
 import IconButton from '@mui/material/IconButton';
 
 
 
 
-function createData(Name_of_Doggy, age, Breed) {
-    return { Name_of_Doggy, age, Breed};
-  }
-  
-  const rows = [
-    createData('Ronnie', 25, "Labrador", ),
-    createData('Tikku', 20,"GermanShepherd" ),
-    createData('Eclair', 26, "Rotweiller"),
-    createData('Cupcake', 30, "Desi"),
-    createData('choco', 35, "Labrador"),
-  ];
-
 let Cart = () =>
 {
     return ( <> 
             
-            <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell align="right" >Name_of_Doggy</TableCell>
-            <TableCell align="right" >Age(in days)&nbsp;</TableCell>
-            <TableCell align="right">Breed&nbsp;</TableCell>
-            
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow
-              key={row.name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell align="right">{row.age}</TableCell>
-              <TableCell align="right">{row.Breed}</TableCell>
+            <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Qty</th>
+            <th scope="col">Amount</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {filteredArr.map((el, index) => {
+            let amount = el.qty * el.price;
+            total += amount;
+            return (
+              <tr>
+                <td>{index + 1}</td>
+                <td>{el.name}</td>
+                <td>Rs {el.price}</td>
+                <td>{el.qty}</td>
+                <td>Rs {amount}</td>
+                <td>
+                  <button
+                    onClick={() => {
+                      dispatch(removeCreator(el.id));
+                    }}
+                  >
+                    Remove
+                  </button>
+                </td>
+              </tr>
+            );
+          })}
 
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Total</td>
+            <td>{total}</td>
+          </tr>
+        </tbody>
+      </table>
+ 
 
 
     <div className="footer">
@@ -92,7 +91,7 @@ let Cart = () =>
 
                  {/* < FavoriteBorderIcon  sx={{ fontSize: 40 }} /> */}
                  <Stack direction="row" spacing={1}>
-                  <IconButton aria-label="FavoriteBorderIcon" href="/Cart"    >
+                  <IconButton aria-label="FavoriteBorderIcon" href="/Preview"    >
                  <FavoriteBorderIcon />
 
                  </IconButton>

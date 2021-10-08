@@ -54,7 +54,7 @@ function SkeletonChildrenDemo(props) {
               <Typography>.</Typography>
             </Skeleton>
           ) : (
-            <Typography>Ted</Typography>
+            <Typography>Daily Dog Care</Typography>
           )}
         </Box>
       </Box>
@@ -121,7 +121,7 @@ const Home = () =>
    
                     {/* < FavoriteBorderIcon  sx={{ fontSize: 40 }} /> */}
                     <Stack direction="row" spacing={1}>
-                     <IconButton aria-label="FavoriteBorderIcon" href="/Cart"    >
+                     <IconButton aria-label="FavoriteBorderIcon" href="/Preview"    >
                     <FavoriteBorderIcon />
    
                     </IconButton>

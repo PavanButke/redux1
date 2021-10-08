@@ -32,7 +32,7 @@ const Product = () =>
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" style={{color:"#81ecec"}}  href="/Cart">Become Parent</Button>
+        <Button size="small" style={{color:"#81ecec"}}  href="/Preview">Become Parent</Button>
         <Button size="small" href="https://www.akc.org/dog-breeds/rottweiler/ ">Learn More</Button>
       
 
@@ -60,7 +60,7 @@ const Product = () =>
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" style={{color:"#81ecec"}} href="/Cart">Become Parent</Button>
+        <Button size="small" style={{color:"#81ecec"}} href="/Preview">Become Parent</Button>
         <Button size="small" href="https://www.akc.org/dog-breeds/golden-retriever/ ">Learn More</Button>
       </CardActions>
     </Card>
@@ -87,7 +87,7 @@ const Product = () =>
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" style={{color:"#81ecec"}} >Become Parent</Button>
+        <Button size="small" href="/Preview" style={{color:"#81ecec"}} >Become Parent</Button>
         <Button size="small" href="https://www.akc.org/dog-breeds/german-shepherd-dog/ ">Learn More</Button>
       </CardActions>
     </Card>

@@ -121,7 +121,7 @@ const Home = () =>
    
                     {/* < FavoriteBorderIcon  sx={{ fontSize: 40 }} /> */}
                     <Stack direction="row" spacing={1}>
-                     <IconButton aria-label="FavoriteBorderIcon" href="/Preview"    >
+                     <IconButton aria-label="FavoriteBorderIcon" href="/Pre"    >
                     <FavoriteBorderIcon />
    
                     </IconButton>

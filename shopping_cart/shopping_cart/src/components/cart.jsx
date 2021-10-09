@@ -16,13 +16,20 @@ import Stack from '@mui/material/Stack';
 import IconButton from '@mui/material/IconButton';
 
 
-
-
-let Cart = () =>
-{
-    return ( <> 
             
-            <table class="table">
+import { useDispatch, useSelector } from "react-redux";
+import { removeCreator } from "../redux/actions";
+let Cart = () => {
+  let state = useSelector((state) => state);
+  let dispatch = useDispatch();
+  let filteredArr = state.filter((el) => el.qty > 0);
+  let total = 0;
+
+  return (
+   
+    <>  
+    <>
+     <table class="table">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -66,64 +73,71 @@ let Cart = () =>
           </tr>
         </tbody>
       </table>
- 
 
+      </>
+      <div className="footer" >
+           
+       
 
-    <div className="footer">
            
        
         
 
-        <AppBar position="relative" >
-            
-          <Container maxWidth="md" p>
-            <Toolbar align-items="center">
-                
+           <AppBar position="relative" >
                
-                 {/* <HomeIcon sx={{ fontSize: 40 }}  /> */}
-                 <Stack direction="row" spacing={1}>
-                  <IconButton aria-label="home" href="/home"    >
-                 <HomeIcon />
-
-                 </IconButton>
-                  </Stack>
-                 <Typography style={{ marginRight: 300   }}></Typography>
-
-                 {/* < FavoriteBorderIcon  sx={{ fontSize: 40 }} /> */}
-                 <Stack direction="row" spacing={1}>
-                  <IconButton aria-label="FavoriteBorderIcon" href="/Preview"    >
-                 <FavoriteBorderIcon />
-
-                 </IconButton>
-                  </Stack>
-
-
-
-
-                 <Typography style={{ marginRight: 250 }}></Typography>
-                <Stack direction="row" spacing={1}>
-                  <IconButton aria-label="FavoriteBorderIcon"     >
-                 <SearchIcon />
-
-                 </IconButton>
-                  </Stack>
-                 <Typography style={{ marginRight: 450 }}></Typography>
-               
-
+             <Container maxWidth="md" p>
+               <Toolbar align-items="center">
+                   
+                  
+                    {/* <HomeIcon sx={{ fontSize: 40 }}  /> */}
+                    <Stack direction="row" spacing={1}>
+                     <IconButton aria-label="home" href="/home"    >
+                    <HomeIcon />
+   
+                    </IconButton>
+                     </Stack>
+                    <Typography style={{ marginRight: 300   }}></Typography>
+   
+                    {/* < FavoriteBorderIcon  sx={{ fontSize: 40 }} /> */}
+                    <Stack direction="row" spacing={1}>
+                     <IconButton aria-label="FavoriteBorderIcon" href="/Preview"    >
+                    <FavoriteBorderIcon />
+   
+                    </IconButton>
+                     </Stack>
+   
+   
+   
+   
+                    <Typography style={{ marginRight: 250 }}></Typography>
+                   <Stack direction="row" spacing={1}>
+                     <IconButton aria-label="FavoriteBorderIcon"     >
+                    <SearchIcon />
+   
+                    </IconButton>
+                     </Stack>
+                    <Typography style={{ marginRight: 450 }}></Typography>
+                  
+   
+             
           
-       
+           
+               </Toolbar>
+             </Container>
+           </AppBar>
+   
+               </div>
+             
         
-            </Toolbar>
-          </Container>
-        </AppBar>
 
-            </div>
-          
+        
+
+        
 
 
 
-    
     </>
+   
     )
 }
  export default Cart;
